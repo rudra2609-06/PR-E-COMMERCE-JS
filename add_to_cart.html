@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add To Cart</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+	<header class="bg-[#F5F8FD]">
+		<div class="mx-auto max-w-[1240px]">
+			<div class="flex md:flex-row flex-col items-center justify-between">
+				<div class="nav-right py-4">
+					<a href="./index.html">
+						<img src="./img/logo.svg" alt="organization banner logo" class="cursor-pointer" />
+					</a>
+				</div>
+
+				<div class="nav-left flex  flex-row items-center md:space-x-6 space-x-3 md:pb-0 pb-3">
+					<a href="./index.html">
+						<div
+							class="add-to-cart flex items-center space-x-2 cursor-pointer p-3 rounded-md bg-white border border-[#e6e9ee]">
+							<img src="./img/add-to-cart.svg" alt="organization add to cart">
+							<h2>Add Product</h2>
+						</div>
+					</a>
+
+					<div
+						class="view-products cursor-pointer flex items-center space-x-2 p-3 rounded-md bg-white border border-[#e6e9ee]">
+						<span class="material-symbols-outlined text-[#404042]">view_list</span>
+						<button class="cursor-pointer">
+							<a href="./index.html">View Product</a>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="md:px-0 px-3 flex-grow">
+		<section class="displayCartDetails py-6">
+			<div class="mx-auto max-w-[1240px]">
+				<div class="wrapper md:ms-24 mx-10">
+					<div class="flex md:justify-between justify-center items-center">
+						<div class="md:text-left text-center">
+							<h3 class="text-[#11294b] text-xl font-medium">Your Cart</h3>
+							<p class="text-[#8b96a8]">Review Items and proceed to checkout</p>
+						</div>
+						<div class="md:block hidden">
+							<h3 class="text-[#11294b]">Total Items</h3>
+							<h5 class="text-[#8b96a8] font-medium text-center"><span id="displayTotalItems"></span></h5>
+						</div>
+					</div>
+					<div class="md:grid md:grid-cols-12 flex flex-col gap-4 mt-4">
+						<div class="md:col-span-8 border border-[#e6e9ee] p-3 rounded-md">
+							<h4 class="text-[#11294b] font-medium pb-1.5">Items in your cart</h4>
+							<div class="displayCartItems border border-[#e6e9ee] rounded-sm">
+								<table id="productsCartTable" class="table-fixed w-full">
+									<thead class="bg-[#f7faff]">
+										<tr class="text-[#11294b]">
+											<th class="py-1.5 font-medium w-1/5">Img</th>
+											<th class="py-1.5 font-medium w-1/5">Item</th>
+											<th class="py-1.5 font-medium w-1/5">Quantity</th>
+											<th class="py-1.5 font-medium w-1/5">Price</th>
+											<th class="py-1.5 font-medium w-1/5">Total</th>
+										</tr>
+									</thead>
+									<tbody class="bg-[#ffd814]">
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="md:col-span-4 border border-[#e6e9ee] rounded-md">
+							<h3 class="text-[#11294b] p-3 font-medium">Order Summary</h3>
+							<ul class="flex flex-col text-[#8b96a8] font-medium space-y-3">
+								<li class="px-3">
+									<div class="orderSummaryItems flex items-center justify-between">
+										<h4>Items<span id="orderSummaryItemsPlaceholder"></span></h4>
+										<p id="orderSummaryItemsTotal"></p>
+									</div>
+								</li>
+								<li class="px-3">
+									<div class="orderSummaryItems flex items-center justify-between">
+										<h4>Delivery Free</h4>
+										<p>Free</p>
+									</div>
+								</li>
+								<li class="px-3">
+									<div class="flex justify-between items-center border-b border-b-[#e6e9ee] pb-3">
+										<h4>Tax</h4>
+										<p>0</p>
+									</div>
+								</li>
+								<li class="px-3">
+									<div class="flex justify-between items-center">
+										<h4 class="text-[#11294b]">Grand Total</h4>
+										<p class="text-[#11294b]" id="orderSummaryGrandtotalPlaceholder"></p>
+									</div>
+								</li>
+							</ul>
+							<div class="flex justify-center items-center mt-4 mb-2">
+								<button id="placeOrderBtn"
+									class="bg-blue-600 rounded-md py-2 w-1/2 text-white font-medium cursor-pointer hover:bg-blue-700 transition-colors duration-300">Place
+									Order</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="./JS/script.js" type="text/javascript"></script>
+</body>
+
+</html>

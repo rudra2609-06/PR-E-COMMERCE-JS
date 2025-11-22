@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>E Commerce</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="">
+	<header class="bg-[#F5F8FD]">
+		<div class="mx-auto max-w-[1240px]">
+			<div class="md:grid md:grid-flow-col grid-flow-row md:grid-row-6">
+				<div class="nav-right py-4 flex items-center space-x-3 md:px-0 px-3">
+					<a href="./index.html">
+						<img src="./img/logo.svg" alt="organization banner logo" class="cursor-pointer" />
+					</a>
+					<input type="text" id="searchText"
+						class="w-full border border-[#e6e9ee] focus:outline-none p-2 rounded-md bg-[#F0F5FF]"
+						placeholder="Search Item...">
+				</div>
+
+				<div class="nav-left flex items-center md:justify-end justify-center space-x-6 md:p-0 px-3 pb-3">
+					<div class="nav-left flex items-center space-x-6">
+
+						<!-- Add Product -->
+						<a href="./products.html">
+							<div
+								class="add-to-cart flex items-center space-x-2 cursor-pointer p-3 rounded-md bg-white border border-[#e6e9ee]">
+								<img src="./img/add-to-cart.svg" alt="">
+								<h2>Add Product</h2>
+							</div>
+						</a>
+
+						<a href="./add_to_cart.html">
+							<div
+								class="view-products cursor-pointer flex items-center space-x-2 p-3 rounded-md bg-white border border-[#e6e9ee]">
+								<span class="material-symbols-outlined text-[#404042]">shopping_cart</span>
+								<h2>Cart</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="display-category py-6">
+		<div class="mx-auto max-w-[1240px] px-4">
+			<div class="flex flex-wrap justify-center items-end gap-6 md:gap-12">
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/minutes.png" alt="Minutes category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Minutes</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/grocery_img.png" alt="Grocery category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Grocery</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/mobile.png" alt="Mobile category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Mobile</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/laptops.png" alt="Laptops category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Laptops</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/furniture.png" alt="Furniture category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Furniture</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/flight.png" alt="Flights category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Flights</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/television.png" alt="Television category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Television</h3>
+				</div>
+				<div class="category-item flex flex-col items-center space-y-3 text-center min-w-[80px]">
+					<img src="./img/beauty_products.png" alt="Beauty category"
+						class="h-16 w-16 cursor-pointer hover:scale-110 transition-transform duration-200">
+					<h3 class="font-medium text-sm md:text-base">Beauty</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="displayAllProducts py-6">
+		<div class="mx-auto max-w-[1240px]">
+			<div id="displayProducts" class="grid grid-cols-6 gap-3">
+			</div>
+		</div>
+	</section>
+	<script src="./JS/script.js" type="text/javascript"></script>
+</body>
+
+</html>

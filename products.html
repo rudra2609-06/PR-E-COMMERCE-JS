@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Add Product Form</title>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="">
+	<header class="bg-[#F5F8FD]">
+		<div class="mx-auto max-w-[1240px]">
+
+			<div class="flex flex-col md:flex-row items-center md:justify-between">
+
+				<div class="nav-right py-4 flex justify-center w-full md:w-auto">
+					<a href="./index.html">
+						<img src="./img/logo.svg" alt="organization banner logo" class="cursor-pointer" />
+					</a>
+				</div>
+
+				<div class="nav-left flex flex-row items-center gap-4 md:space-x-6 pb-4 md:pb-0">
+					<a href="./index.html">
+						<div
+							class="view-products cursor-pointer flex items-center space-x-2 p-3 rounded-md bg-white border border-[#e6e9ee]">
+							<span class="material-symbols-outlined text-[#404042]">view_list</span>
+							<h2>View Product</h2>
+						</div>
+					</a>
+
+					<a href="./add_to_cart.html">
+						<div
+							class="add-to-cart flex items-center space-x-2 cursor-pointer p-3 rounded-md bg-white border border-[#e6e9ee]">
+							<img src="./img/add-to-cart.svg" alt="">
+							<h2>Cart</h2>
+						</div>
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+	</header>
+
+
+
+	<section class="add-products py-6 md:px-0 px-5">
+		<div class="mx-auto max-w-[1240px]">
+			<div class="w-full max-w-[500px] mx-auto">
+				<div class="form border border-[#e6e9ee] rounded-md px-6 py-5">
+					<h3 class="text-[#0b2447] font-medium text-[18px]">Fill Below Details To Continue</h3>
+					<div class="pt-5">
+						<form id="addProductForm" method="post">
+							<div class="relative category-container  flex flex-col space-y-4">
+								<label for="category" class="text-[#8b96a8]">Category</label>
+								<input type="text" id="category" name="pCategory"
+									class="w-full focus:outline-none border border-[#e6e9ee] rounded-sm px-8 py-2  focus:ring-2 ring-[#e6e9ee]"
+									placeholder="Select a category">
+								<span class="absolute top-12 left-1">
+									<i class="fa-solid fa-tag text-[#dbe0e6]"></i>
+								</span>
+							</div>
+
+							<div class="relative product-name-container  flex flex-col space-y-4">
+								<label for="productName" class="text-[#8b96a8]">Product Name</label>
+								<input type="text" id="productName" name="pName"
+									class="w-full focus:outline-none border border-[#e6e9ee] rounded-sm px-8 py-2  focus:ring-2 ring-[#e6e9ee]"
+									placeholder="Enter product name">
+								<span class="material-symbols-outlined absolute top-12 left-1 text-[#dbe0e6]">
+									text_fields
+								</span>
+							</div>
+							<div class="relative img-url-container  flex flex-col space-y-4">
+								<label for="imgURL" class="text-[#8b96a8]">Image URL</label>
+								<input type="url" id="imgURL" name="pUrl"
+									class="w-full focus:outline-none border border-[#e6e9ee] rounded-sm px-8 py-2  focus:ring-2 ring-[#e6e9ee]"
+									placeholder="Enter product url">
+								<span class="material-symbols-outlined absolute top-12 left-1 text-[#dbe0e6]">
+									imagesmode
+								</span>
+							</div>
+							<div class="relative product-price-container  flex flex-col space-y-4">
+								<label for="pPrice" class="text-[#8b96a8]">Price</label>
+								<input type="number" id="pPrice" name="pPrice"
+									class="w-full focus:outline-none border border-[#e6e9ee] rounded-sm px-8 py-2  focus:ring-2 ring-[#e6e9ee]"
+									placeholder="Enter product Price">
+								<span class="material-symbols-outlined absolute top-12 left-1 text-[#dbe0e6]">
+									currency_rupee_circle
+								</span>
+							</div>
+							<div class="relative product-description-container flex flex-col space-y-4">
+								<label for="pDescription" class="text-[#8b96a8]">Description</label>
+								<textarea name="pDescription" id="pDescription" rows="3"
+									class="border border-[#e6e9ee] focus:outline-none p-3"></textarea>
+							</div>
+							<div class="mt-3">
+								<button id="addProductBtn" type="submit"
+									class="p-3 w-full bg-[#2874f0] text-[#fff] rounded-md cursor-pointer hover:bg-blue-500 transition-colors duration-300"></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="./JS/script.js" type="text/javascript"></script>
+</body>
+
+</html>
