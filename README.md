@@ -41,7 +41,7 @@ A modern, fully-featured e-commerce web application built with vanilla JavaScrip
 <p align="center">
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6519d69a-80df-4c02-ab9d-0e43ab48f42c" />
  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3f4170f-daa3-495e-a6c3-48d58b898b98" />
-  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0ee3cc26-eff4-44a5-a996-21b0f4c1a93b" />
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d9c46d6b-0f76-43b4-9fa2-8d977bf2ee59" />
 
 </p>
 
