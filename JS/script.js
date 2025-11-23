@@ -34,25 +34,50 @@ document.addEventListener("DOMContentLoaded", () => {
       cartTable.innerHTML = "";
       
       cartProducts.forEach((cProduct) => {
-        const cartRow = document.createElement("tr");
-        cartRow.className = "border-b border-gray-200";
-        cartRow.innerHTML = `
-          <td class="py-4 px-3">
-            <div class="flex items-center gap-3">
-              <img src="${cProduct.pUrl}" alt="${cProduct.pName}" class="w-16 h-16 object-cover rounded" />
-              <span class="font-medium">${cProduct.pName}</span>
+      const cartRow = document.createElement("tr");
+      cartRow.className =
+      "border-b border-gray-200";
+      
+      cartRow.innerHTML = `
+          <td class="py-4 px-3 bg-white">
+            <img 
+              src="${cProduct.pUrl}" 
+              alt="${cProduct.pName}" 
+              class="w-16 h-16 rounded-lg shadow-sm object-cover mx-auto"
+            />
+          </td>
+
+          <td class="py-4 px-3 bg-white font-semibold text-gray-800 text-sm">
+            ${cProduct.pName}
+          </td>
+
+          <td class="py-4 px-3 bg-white">
+            <div class="flex items-center gap-3 bg-gray-100 rounded-full px-3 py-1 w-fit">
+              <button 
+                class="quantity-minus w-7 h-7 flex items-center justify-center bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold"
+                minus-id="${cProduct.id}"
+              >-</button>
+
+              <span class="font-medium text-gray-700 min-w-[20px] text-center">
+                ${cProduct.quantity || 1}
+              </span>
+
+              <button 
+                class="quantity-plus w-7 h-7 flex items-center justify-center bg-gray-200 hover:bg-gray-300 transition rounded-full text-lg font-semibold"
+                plus-id="${cProduct.id}"
+              >+</button>
             </div>
           </td>
-          <td class="py-4 px-3">
-            <div class="flex items-center gap-2">
-              <button class="quantity-minus bg-gray-200 hover:bg-gray-300 px-2 py-1 rounded" minus-id="${cProduct.id}">-</button>
-              <span class="px-3">${cProduct.quantity || 1}</span>
-              <button class="quantity-plus bg-gray-200 hover:bg-gray-300 px-2 py-1 rounded" plus-id="${cProduct.id}">+</button>
-            </div>
+
+          <td class="py-4 px-3 bg-white font-medium text-gray-700 text-center">
+            ${rupee}${cProduct.pPrice}
           </td>
-          <td class="py-4 px-3">${rupee}${cProduct.pPrice}</td>
-          <td class="py-4 px-3 font-semibold">${rupee}${cProduct.pPrice * (cProduct.quantity || 1)}</td>
+
+          <td class="py-4 px-3 bg-white font-semibold text-green-700 text-center">
+            ${rupee}${cProduct.pPrice * (cProduct.quantity || 1)}
+          </td>
         `;
+
         cartTable.appendChild(cartRow);
         
         let quantity = 0;
